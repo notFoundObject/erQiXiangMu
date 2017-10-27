@@ -8,4 +8,6 @@ class AdminUser extends Model
 {
     //
 	protected $table = 'admin_user';
+	 protected $guarded = [];
+	  public $timestamps = false; 
 }
