@@ -12,12 +12,12 @@
 */
 
 //显示前台首页
-Route::get('/','home\IndexController@index');
+//Route::get('/','home\IndexController@index');
 
 
 //前台路由群组
-// Route::group(['namespace'=>'home'],function () {
-Route::group(['prefix' => 'home','namespace'=>'home'], function () {
+
+Route::group(['prefix' => 'admin','namespace'=>'home'], function () {
 
 	Route::get('/','home\IndexController@index');
 
