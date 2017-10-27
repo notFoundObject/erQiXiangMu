@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     //
-	protected $table = 'user';
+	protected $table = 'sell_car';
+	// protected $connection = 'auto-home';
+	
+
 }
