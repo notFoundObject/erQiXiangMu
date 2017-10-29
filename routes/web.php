@@ -16,10 +16,10 @@ Route::get('/','home\IndexController@index');
 
 
 //前台路由群组
-// Route::group(['namespace'=>'home'],function () {
-Route::group(['prefix' => 'home','namespace'=>'home'], function () {
+Route::group(['namespace'=>'home'],function () {
+// Route::group(['prefix' => 'home','namespace'=>'home'], function () {
 
-	Route::get('/','home\IndexController@index');
+	// Route::get('/','home\IndexController@index');
 
 //['middleware','login']
 	//首页
