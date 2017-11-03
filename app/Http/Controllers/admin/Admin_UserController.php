@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Model\AdminUser;
+use App\Model\Role;
+use App\Model\Auth;
+use App\Model\Auth_role;
+use App\Model\Admin_user_role;
 use Illuminate\Support\Facades\Validator;
 use DB;
 use Intervention\Image\ImageManagerStatic as Image;
@@ -24,31 +28,11 @@ class Admin_UserController extends Controller
      */
     public function index(Request $request)
     {   
-        $ob = DB::table('admin_user');
-        $where = [];
-       
-        if($request->has('nickname'))
-        {
-            $nickname = $request->get('nickname');
-            // dd($nickname);
-            $ob->where('nickname','like','%'.$nickname.'%');
-            $where['nickname'] = $nickname;
-        }
-         if($request->has('auth'))
-        {
-            $auth = $request->get('auth');
-            $ob->where('auth','like','%'.$auth.'%');
-            $where['auth'] = $auth;
-        }
-        //  if($request->has('all'))
-        // {
-        //     $all = $request->get('all');
-        //     $ob->where('auth','like','%%');
-        //     $where['auth'] = $auth;
-        // }
+        
+        $input = $request->input('nickname') ?  $request->input('nickname'):'';
 
-         $users = $ob->paginate(3);
-        return view('admin.admin_user.users',['users'=>$users,'where'=>$where]);
+        $users = AdminUser::where('nickname','like', '%'.$input.'%')->paginate(3);
+        return view('admin.admin_user.users',['users'=>$users]);
     }
 
     /**
@@ -119,6 +103,7 @@ class Admin_UserController extends Controller
              $input = $request->except('repwd','_token','photo');
              
               $input['pwd'] = encrypt($input['pwd']);
+             
                 $res = AdminUser::create($input);
                 if($res )
                 {
@@ -211,15 +196,29 @@ class Admin_UserController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
-        //$res = DB::table('admin_user')->where('id',$id)->delete();
-        $res = AdminUser::where('id',$id)->delete();
-        if($res)
+
+        
+       
+         $aur_info = Admin_user_role::where('admin_user_id',$id)->first();
+        if($aur_info)
         {
-            return redirect('/admin/admin_user')->with('error','删除成功');
+            $user_role_res = Admin_user_role::where('admin_user_id',$id)->delete();
+             $user_res = AdminUser::where('id',$id)->delete(); 
+            if($user_res && $user_role_res)
+            {
+                return redirect('admin/admin_user')->with('error','删除成功');
+            }else{
+                return redirect('admin/admin_user')->with('error','删除失败');
+            }
         }else{
-            return redirect('admin/admin_user')->with('error','删除失败');
+              $user_res = AdminUser::where('id',$id)->delete();
+                 if($user_res){
+                            return redirect('admin/admin_user')->with('error','删除成功');
+                    }else{
+                        return redirect('admin/admin_user')->with('error','删除失败');
+                 }
         }
+
     }
     public function status($id,$status)
     {
@@ -237,5 +236,32 @@ class Admin_UserController extends Controller
             return back();
         }
         
+    }
+     public function showUserAuth($id)
+    {
+        $info = AdminUser::find($id);
+        $roles = Role::all();
+        return view('admin.admin_user.showUserAuth',['info'=>$info,'roles'=>$roles]);
+    }
+    public function doUserAuth(Request $request,$id)
+    {   
+        $user = AdminUser::find($id);
+       $role = $request->get('role');
+       $user->role = $role;
+       $res = $user->save();
+       $ids = [];
+       $role_name = $role;
+       $role_id = Role::where('role_name',$role_name)->first()->id;
+       $ids['role_id'] = $role_id;
+       $ids['admin_user_id'] = $id;
+
+       $role_res = Admin_user_role::create($ids);
+       
+       if($res && $role_res)
+       {
+            return redirect('admin/admin_user')->with('error','操作成功');
+       }else{
+            return back()->with('error','操作失败');
+       }
     }
 }

@@ -1,6 +1,6 @@
 @extends('common.admin')
 @section('content')
-	 <div class="tpl-content-wrapper">
+	 
             <div class="row-content am-cf">
                 <div class="row">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
@@ -53,14 +53,15 @@
                                             <input type="text" name='tel' class="tpl-form-input" id="user-phone" placeholder="请输入手机号" value="{{$user->tel}}">
                                             <small id="phone"> </small>
                                         </div>
-                                    </div>  
-                                       <div class="am-form-group">
+                                    </div>
+                      
+                                   <!--     <div class="am-form-group">
                                         <label for="user-auth" class="am-u-sm-3 am-form-label">权限<span class="tpl-form-line-small-title">auth</span></label>
                                         <div class="am-u-sm-9">
-                                            <input type="text" name='tel' class="tpl-form-input" id="user-auth" placeholder="请输入数字1-10" value="{{$user->auth}}">
+                                            <input type="text" name='tel' class="tpl-form-input" id="user-auth" placeholder="请输入数字1-10" value="">
                                             <small id="phone"> </small>
                                         </div>
-                                    </div>  
+                                    </div>   -->
                                     
                                     <div class="am-form-group">
                                         <label for="user-photo" class="am-u-sm-3 am-form-label"> 个人头像<span class="tpl-form-line-small-title"> Images</span></label>
@@ -111,6 +112,6 @@
                 </div>
 
             </div>
-        </div>
+     
 
 @endsection

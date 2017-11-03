@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Amaze UI Admin index Examples</title>
+    <title>@yield('title')</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,16 +19,18 @@
     <link rel="stylesheet" href="{{ asset('assets/admin/css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/admin/css/bootstrap.min.css')}}">
     <script src="{{asset('assets/admin/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/admin/layer/layer.js')}}"></script>
+    <script src="{{asset('assets/admin/js/jquery-1.8.3.min.js')}}"></script>
 </head>
 
 <body data-type="index">
-    <script src="{{asset('assets/admin/js/theme.js')}}"></script>
+    <script src="{{ asset('assets/admin/js/theme.js') }}"></script>
     <div class="am-g tpl-g">
         <!-- 头部 -->
         <header>
             <!-- logo -->
             <div class="am-fl tpl-header-logo">
-                <a href="javascript:;"><img src="{{asset('assets/admin/img/logo.png')}}" alt=""></a>
+                <a href="javascript:;"><img src="{{ asset('assets/admin/img/logo.png') }}" alt=""></a>
             </div>
             <!-- 右侧内容 -->
             <div class="tpl-header-fluid">
@@ -50,7 +52,7 @@
                     <ul>
                         <!-- 欢迎语 -->
                         <li class="am-text-sm tpl-header-navbar-welcome">
-                            <a href="javascript:;">欢迎你, <span>Amaze UI</span> </a>
+                            <a href="javascript:;">欢迎你, <span> {{session()->get('adminuser')->nickname}}</span> </a>
                         </li>
 
                         <!-- 新邮件 -->
@@ -64,7 +66,9 @@
                                 <li class="tpl-dropdown-menu-messages">
                                     <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
                                         <div class="menu-messages-ico">
-                                            <img src="{{asset('assets/admin/img/user06.png')}}" alt="">
+                                            <img src="{{ asset('assets/admin/img/user04.png') }}" alt="">
+
+
                                         </div>
                                         <div class="menu-messages-time">
                                             3小时前
@@ -83,7 +87,9 @@
                                 <li class="tpl-dropdown-menu-messages">
                                     <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">
                                         <div class="menu-messages-ico">
-                                            <img src="{{asset('assets/admin/img/user02.png')}}" alt="">
+                                            <img src="{{ asset('assets/admin/img/user02.png') }}" alt="">
+
+
                                         </div>
                                         <div class="menu-messages-time">
                                             5天前
@@ -159,8 +165,8 @@
                         </li>
 
                         <!-- 退出 -->
-                        <li class="am-text-sm">
-                            <a href="javascript:;">
+                         <li class="am-text-sm">
+                            <a href="{{url('/admin/exit')}}">
                                 <span class="am-icon-sign-out"></span> 退出
                             </a>
                         </li>
@@ -189,29 +195,28 @@
             <div class="tpl-sidebar-user-panel">
                 <div class="tpl-user-panel-slide-toggleable">
                     <div class="tpl-user-panel-profile-picture">
-                        <img src="{{asset('assets/admin/img/user04.png')}}" alt="">
+                        <img src="{{ asset('assets/admin/img/user04.png') }}" alt="">
+
                     </div>
                     <span class="user-panel-logged-in-text">
               <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
-              禁言小张
+              {{session()->get('adminuser')->nickname}}
           </span>
                     <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
                 </div>
             </div>
 
-            <!-- 菜单 -->
-            <ul class="sidebar-nav">
-                
+            <ul class="sidebar-nav" id="active">
+                <li class="sidebar-nav-heading">Components <span class="sidebar-nav-heading-info"> 附加组件</span></li>
                 <li class="sidebar-nav-link">
-                    <a href="{{url('/admin/index')}}" class="active">
+                    <a href="{{url('/admin/')}}" class="active">
                         <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
                     </a>
                 </li>
-                <!-- 用户管理模块  -->
-                 <li class="sidebar-nav-link">
-                    <a href="javascript:viod;" class="sidebar-nav-sub-title">
+                <li class="sidebar-nav-link">
+                    <a href="javascript:;" class="sidebar-nav-sub-title">
                         <i class="am-icon-user sidebar-nav-link-logo"></i> 用户管理
-                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                        <span class="am-icon-user am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
                         <li class="sidebar-nav-link">
@@ -222,16 +227,14 @@
 
                         <li class="sidebar-nav-link">
                             <a href="{{url('admin/user_info')}}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 普通用户列表
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用户列表
                             </a>
                         </li>
-
                     </ul>
                 </li>
-                <!-- 角色管理模块   -->
-                      <li class="sidebar-nav-link">
+                 <li class="sidebar-nav-link">
                     <a href="javascript:viod;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-role sidebar-nav-link-logo"></i> 角色管理
+                        <i class="am-icon-wrench sidebar-nav-link-logo"></i> 角色管理
                         <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
                     </a>
                     <ul class="sidebar-nav sidebar-nav-sub">
@@ -242,36 +245,63 @@
                         </li>
                     </ul>
                 </li>
-                <!-- 权限管理模块 -->
-                      <li class="sidebar-nav-link">
-                    <a href="javascript:viod;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-auth sidebar-n av-link-logo"></i> 权限管理
-                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
-                    </a>
-                    <ul class="sidebar-nav sidebar-nav-sub">
-                        <li class="sidebar-nav-link">
-                            <a href="{{url('admin/auth')}}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 权限列表
-                            </a>
-                        </li>  
-                    </ul>
-                </li>
-                
+                <li class="sidebar-nav-link">
+                    <a href="{{ url('/admin/auth') }}">
+                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 权限管理
 
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="{{ url('/admin/type') }}">
+                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 车辆参数管理
+
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="{{ url('/admin/seal') }}">
+                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 订单管理
+
+                    </a>
+                </li>
+
+                <li class="sidebar-nav-link">
+                    <a href="{{ url('/admin/article') }}">
+                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 文章管理
+
+                    </a>
+                </li>
+        
+               <li class="sidebar-nav-link">
+                    <a href="{{ url('admin/ad') }}">
+                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 广告管理
+                    </a>
+                </li>
+                <li class="sidebar-nav-link">
+                    <a href="{{ url('/admin/config') }}">
+                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 网站配置
+
+                    </a>
+                </li>
             </ul>
         </div>
-
-
-        <!-- 内容区域 -->
-        <section>
-            @yield('content')
-        </section>
+        <div class="tpl-content-wrapper">
+        @yield('content')
+        </div>
     </div>
     </div>
-    <script src="{{asset('assets/admin/js/amazeui.min.js')}}"></script>
-    <script src="{{asset('assets/admin/js/amazeui.datatables.min.js')}}"></script>
-    <script src="{{asset('assets/admin/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('assets/admin/js/app.js')}}"></script>
+    <script src="{{ asset('assets/admin/js/amazeui.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/amazeui.datatables.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/dataTables.responsive.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/app.js') }}"></script>
+
 </body>
+    <script>
+        $('#active > li').click(function(){
+           
+            $(this).find("a:eq(0)").addClass("active").parent().siblings().find("a").removeAttr("class");;
+        });
+      
 
+    </script>
 </html>

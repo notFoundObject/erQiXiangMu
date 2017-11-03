@@ -1,4 +1,4 @@
-,@extends('common.admin')
+@extends('common.admin')
 @section('content')
 	
 @endsection
