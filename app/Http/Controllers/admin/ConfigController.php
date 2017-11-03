@@ -11,20 +11,13 @@ class ConfigController extends Controller
     //
    public function index()
     {
-    	
-    	return view('admin.config.index');
-    }
-
-    //遍历数据
-    public function edit()
-    {
     	$config = Config::first();
-       	 //dd($config);
-       
-
-		return view('admin.config.index',compact('config'));
-
+         //dd($config);
+    	//return view('admin.config.index');
+        return view('admin.config.index',compact('config'));
     }
+
+    
 
     //配置修改判断
     public function store (Request $request)

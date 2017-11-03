@@ -37,29 +37,22 @@
 
             <div class="am-form-group">
                 <label for="user-weibo" name="logo" class="am-u-sm-3 am-form-label">网站logo </label>
-                <div class="am-u-sm-9">
-                    <div class="am-form-group am-form-file">
-                        
 
-                        <div class="fileupload fileupload-new" data-provides="fileupload">
-                            <div class="fileupload-preview thumbnail form-control"></div>
-                            
-                            <div>
-                                <span class="btn btn-file btn-alt btn-sm">
-                                    <span class="fileupload-new">选择图片</span>
-                                    <br>
-                                    
-                                    
-                                    <!-- <input type="file" /> -->
-                                    <input type="file" name="logo"/>
-                                  
-                                </span>
-                                
-                            </div>
-                        </div>
+                
+                   
+                <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="fileupload-preview thumbnail form-control">
                     </div>
 
+                    <div>
+                        <span class="btn btn-file btn-alt btn-sm">
+                          
+                            <input type="file" name="logo" />
+                        </span>
+                        
+                    </div>
                 </div>
+         
             </div>
 
             <div class="am-form-group">
@@ -74,10 +67,7 @@
                 </div>
             </div>
 
-            
-         
-            
-            <div class="am-form-group">
+           <!--  <div class="am-form-group">
                 <label for="user-email"  class="am-u-sm-3 am-form-label">网站开关 </label>
                 <div class="am-u-sm-9">
 
@@ -87,7 +77,7 @@
                   
                                                
                 </div>
-            </div>
+            </div> -->
             
 
             <div class="am-form-group">

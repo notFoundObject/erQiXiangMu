@@ -110,47 +110,19 @@
     <div id="divs2_0">
       <ul class="carList">
         <li>
-          <div class="list-infoBox"> <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> </a>
-            <p class="infoBox"> <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> </p>
+          <div class="list-infoBox"> 
+          <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> 
+          <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> 
+          </a>
+            <p class="infoBox"> 
+            <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> 
+            </p>
             <p class="fc-gray"> <span class="tag-gray">石家庄</span> <span class="">2014年11月上牌</span> <em class="shuxian">|</em> 行驶2.4万公里 </p>
             <p class="priType-s"> <span> <i class="fc-org priType"> 2.10万 </i> </span> <s>3.40万</s> </p>
           </div>
-        </li>
-        <li>
-          <div class="list-infoBox"> <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> </a>
-            <p class="infoBox"> <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> </p>
-            <p class="fc-gray"> <span class="tag-gray">石家庄</span> <span class="">2014年11月上牌</span> <em class="shuxian">|</em> 行驶2.4万公里 </p>
-            <p class="priType-s"> <span> <i class="fc-org priType"> 2.10万 </i> </span> <s>3.40万</s> </p>
-          </div>
-        </li>
-        <li>
-          <div class="list-infoBox"> <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> </a>
-            <p class="infoBox"> <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> </p>
-            <p class="fc-gray"> <span class="tag-gray">石家庄</span> <span class="">2014年11月上牌</span> <em class="shuxian">|</em> 行驶2.4万公里 </p>
-            <p class="priType-s"> <span> <i class="fc-org priType"> 2.10万 </i> </span> <s>3.40万</s> </p>
-          </div>
-        </li>
-        <li>
-          <div class="list-infoBox"> <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> </a>
-            <p class="infoBox"> <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> </p>
-            <p class="fc-gray"> <span class="tag-gray">石家庄</span> <span class="">2014年11月上牌</span> <em class="shuxian">|</em> 行驶2.4万公里 </p>
-            <p class="priType-s"> <span> <i class="fc-org priType"> 2.10万 </i> </span> <s>3.40万</s> </p>
-          </div>
-        </li>
-        <li>
-          <div class="list-infoBox"> <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> </a>
-            <p class="infoBox"> <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> </p>
-            <p class="fc-gray"> <span class="tag-gray">石家庄</span> <span class="">2014年11月上牌</span> <em class="shuxian">|</em> 行驶2.4万公里 </p>
-            <p class="priType-s"> <span> <i class="fc-org priType"> 2.10万 </i> </span> <s>3.40万</s> </p>
-          </div>
-        </li>
-        <li>
-          <div class="list-infoBox"> <a title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" target="_blank" class="imgtype" href="infor.html"> <img width="290" height="194" src="{{ asset ('assets/home/images/carimg.jpg') }}" alt="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版"> </a>
-            <p class="infoBox"> <a  title="奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版" href="infor.html" target="_blank" class="info-title">奇瑞QQ3 2012款 QQ3 0.8 手动 梦想版</a> </p>
-            <p class="fc-gray"> <span class="tag-gray">石家庄</span> <span class="">2014年11月上牌</span> <em class="shuxian">|</em> 行驶2.4万公里 </p>
-            <p class="priType-s"> <span> <i class="fc-org priType"> 2.10万 </i> </span> <s>3.40万</s> </p>
-          </div>
-        </li>
+        
+        
+      
       </ul>
     </div>
     <div id="divs2_1" style="display: none;">
@@ -358,52 +330,20 @@
         <div class="bd">
           <ul>
             <li >
-              <div class="bd-dl"> <a href="newsinfor.html" class="aImg"> <img src="{{ asset ('assets/home/images/car2.jpg') }}" /> </a>
+             @foreach($article as $v)
+              <div class="bd-dl"> <a href="{{url('/show')}}" class="aImg"> 
+              <img src="{{ asset('upload/'.$v->art_thumb)}}" /> </a>
+             
                 <div class="joininfor">
-                  <h4>当漂移车手  遇见限量A8</h4>
+                  <h4>{{ $v->art_title }}</h4>
                   <p>今年的明星车辆、全省唯一一辆橙色奥迪A8L，他的买家是一位身份特殊的勇士，一位知名的...</p>
-                  <div align="right"> <a href="#" class="cMore">查看详情</a> </div>
+                  <div align="right"> <a href="{{url('/show')}}" class="cMore">查看详情</a> </div>
                 </div>
+            
               </div>
-              <div class="bd-dl"> <a href="newsinfor.html" class="aImg"> <img src="{{ asset ('assets/home/images/car2.jpg') }}" /> </a>
-                <div class="joininfor">
-                  <h4>青藏川藏   曲水流觞</h4>
-                  <p>在2年的发展历程中，与很多朋友结下了缘分，这些朋友大多成为了我们的车主和会员，他们有着不...</p>
-                  <div align="right"> <a href="newsinfor.html" class="cMore">查看详情</a> </div>
-                </div>
-              </div>
-            </li>
-            <li >
-              <div class="bd-dl"> <a href="newsinfor.html" class="aImg"> <img src="{{ asset ('assets/home/images/car2.jpg') }}" /> </a>
-                <div class="joininfor">
-                  <h4>当漂移车手  遇见限量A8</h4>
-                  <p>今年的明星车辆、全省唯一一辆橙色奥迪A8L，他的买家是一位身份特殊的勇士，一位知名的...</p>
-                  <div align="right"> <a href="newsinfor.html" class="cMore">查看详情</a> </div>
-                </div>
-              </div>
-              <div class="bd-dl"> <a href="newsinfor.html" class="aImg"> <img src="{{ asset ('assets/home/images/car2.jpg') }}" /> </a>
-                <div class="joininfor">
-                  <h4>青藏川藏   曲水流觞</h4>
-                  <p>在2年的发展历程中，与很多朋友结下了缘分，这些朋友大多成为了我们的车主和会员，他们有...</p>
-                  <div align="right"> <a href="newsinfor.html" class="cMore">查看详情</a> </div>
-                </div>
-              </div>
-            </li>
-            <li >
-              <div class="bd-dl"> <a href="newsinfor.html" class="aImg"> <img src="{{ asset ('assets/home/images/car2.jpg') }}" /> </a>
-                <div class="joininfor">
-                  <h4>当漂移车手  遇见限量A8</h4>
-                  <p>今年的明星车辆、全省唯一一辆橙色奥迪A8L，他的买家是一位身份特殊的勇士，一位知名的专业...</p>
-                  <div align="right"> <a href="newsinfor.html" class="cMore">查看详情</a> </div>
-                </div>
-              </div>
-              <div class="bd-dl"> <a href="newsinfor.html" class="aImg"> <img src="{{ asset ('assets/home/images/car2.jpg') }}" /> </a>
-                <div class="joininfor">
-                  <h4>青藏川藏   曲水流觞</h4>
-                  <p>在2年的发展历程中，与很多朋友结下了缘分，这些朋友大多成为了我们的车主和会员，他们...</p>
-                  <div align="right"> <a href="newsinfor.html" class="cMore">查看详情</a> </div>
-                </div>
-              </div>
+              @endforeach
+              
+
             </li>
           </ul>
         </div>
@@ -416,13 +356,15 @@
         <h2>加盟故事</h2>
         <a href="medialist.html" class="newsmore">更多</a> </div>
       <div class="r-news-list">
-        <ul>
-          <li><span class="date">11月02日</span><i class="icon "></i><a href="newsinfor.html" title="阳光易贷网贷10月份月报"> 阳光易贷网贷10月份月报 </a> </li>
-          <li><span class="date">10月10日</span><i class="icon "></i><a href="newsinfor.html" title="阳光易贷网贷9月份月报"> 阳光易贷网贷9月份月报 </a> </li>
-          <li><span class="date">09月28日</span><i class="icon "></i><a href="newsinfor.html" title="关于2016年国庆节放假工作安排的通知"> 关于2016年国庆节放假工作安... </a> </li>
-          <li><span class="date">09月13日</span><i class="icon "></i><a href="newsinfor.html" title="关于2016年中秋节放假工作安排的通知"> 关于2016年中秋节放假工作安... </a> </li>
-          <li><span class="date">09月13日</span><i class="icon "></i><a href="newsinfor.html" title="关于2016年中秋节放假工作安排的通知"> 关于2016年中秋节放假工作安... </a> </li>
-        </ul>
+      @foreach($article as $k=>$v)
+        @if ($k < 5)
+         <li><span class="date">{{ $v->art_time }}</span><i class="icon "></i><a href="{{url('/show')}}" > {{ $v->art_title }} </a> </li>
+      
+        @endif
+
+
+       
+      @endforeach
       </div>
     </div>
   </div>

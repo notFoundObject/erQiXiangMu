@@ -249,47 +249,11 @@
                         </li>
                     </ul>
                 </li>
-
                 <li class="sidebar-nav-link">
                     <a href="{{ url('/admin/auth') }}">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 权限管理
 
                     </a>
-                </li>
-                
-                 <li class="sidebar-nav-link">
-                    <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 买卖管理
-                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
-                    </a>
-                    <ul class="sidebar-nav sidebar-nav-sub">
-                        <li class="sidebar-nav-link">
-                            <a href="{{ url('admin/sell') }}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 卖车列表
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                
-                <li class="sidebar-nav-link">
-                    <a href="javascript:;" class="sidebar-nav-sub-title">
-                        <i class="am-icon-table sidebar-nav-link-logo"></i> 广告管理
-                        <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
-                    </a>
-                    <ul class="sidebar-nav sidebar-nav-sub">
-                        <li class="sidebar-nav-link">
-                            <a href="{{ url('admin/ad/create') }}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 广告添加
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="sidebar-nav sidebar-nav-sub">
-                        <li class="sidebar-nav-link">
-                            <a href="{{ url('admin/ad') }}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 广告列表
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="sidebar-nav-link">
@@ -298,7 +262,6 @@
 
                     </a>
                 </li>
-
                 <li class="sidebar-nav-link">
                     <a href="{{ url('/admin/seal') }}">
                         <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 订单管理

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Model;
+namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Config extends Model
+class Commodity_list extends Model
 {
     //
-    protected $table = 'configuration';
+    protected $table = 'commodity_list';
     
     //去除时间戳问题
     public $timestamps = false;

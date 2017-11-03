@@ -121,7 +121,7 @@ $(function () {
   </div>
 </div>
 <ul class="navmenu">
-  <li class="active"><a href="index.html">首页</a><span></span></li>
+  <li class="active"><a href="{{url('/')}}">首页</a><span></span></li>
   <li><a href="list.html">我要买车</a><span></span></li>
   <li><a href="{{ url('home/Sell')}}">我要卖车</a><span></span></li>
   <li><a href="#">阳光联盟</a><span></span></li>

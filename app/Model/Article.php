@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Model;
+namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Config extends Model
+class Article extends Model
 {
     //
-    protected $table = 'configuration';
+     protected $table = 'blog_article';
     
     //去除时间戳问题
     public $timestamps = false;
